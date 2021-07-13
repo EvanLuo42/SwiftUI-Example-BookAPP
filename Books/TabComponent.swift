@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TabComponent.swift
 //  Books
 //
 //  Created by Evan Luo on 2021/7/12.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var items: [Book]
+struct TabComponent: View {
     var body: some View {
         TabView{
-            HomeView(items: items)
+            HomeView()
                 .tabItem({
                     Image(systemName: "house")
                     Text("Home")
                 })
+                .navigationTitle("Home")
                     
             Text("PAGE TWO")
                 .tabItem({
@@ -32,8 +32,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TabComponent_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(items: [Book(name: "EvanLuo42", imageName: "book1"), Book(name: "EvanLuo42", imageName: "book1"), Book(name: "EvanLuo42", imageName: "book1")])
+        TabComponent()
     }
 }

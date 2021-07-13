@@ -11,7 +11,7 @@ import SwiftUI
 struct BooksApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(items: [Book(name: "EvanLuo42", imageName: "book1"), Book(name: "EvanLuo42", imageName: "book1")])
         }
     }
 }
